@@ -26,9 +26,42 @@ def remove_duplicates(df: pd.DataFrame) -> pd.DataFrame:
     return df_clean
 
 
+def unify_categories(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    組員 B 任務 2: city 與 gender 統一
+    - city: 11 種寫法（含台/臺繁簡異體與英文 Taipei、Kaohsiung）統一對應為 6 個標準縣市，
+            缺失者（18 筆）保留為 np.nan
+    - gender: 統一為 'M' 與 'F'（'男' -> 'M', '女' -> 'F'）
+    """
+    df_clean = df.copy()
+
+    # 1. city 統一
+    city_map = {
+        "台北市": "台北市", "臺北市": "台北市", "Taipei": "台北市",
+        "新北市": "新北市",
+        "台中市": "台中市", "臺中市": "台中市",
+        "台南市": "台南市", "臺南市": "台南市",
+        "高雄市": "高雄市", "Kaohsiung": "高雄市",
+        "桃園市": "桃園市"
+    }
+    df_clean["city"] = df_clean["city"].map(city_map)
+    print(f"[city 統一] 6 個縣市有效筆數: {df_clean['city'].notna().sum()}，缺值: {df_clean['city'].isna().sum()} 筆")
+
+    # 2. gender 統一
+    gender_map = {
+        "M": "M", "男": "M",
+        "F": "F", "女": "F"
+    }
+    df_clean["gender"] = df_clean["gender"].map(gender_map)
+    print(f"[gender 統一] M: {(df_clean['gender'] == 'M').sum()} 筆, F: {(df_clean['gender'] == 'F').sum()} 筆")
+
+    return df_clean
+
+
 if __name__ == "__main__":
     if not os.path.exists(RAW_DATA_PATH):
         raise FileNotFoundError(f"找不到原始資料: {RAW_DATA_PATH}")
 
     df = pd.read_csv(RAW_DATA_PATH)
     df = remove_duplicates(df)
+    df = unify_categories(df)
