@@ -218,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Course materials
+*.pdf
+
+# Generated data (rebuilt by src/clean.py)
+data/clean/*.csv
+!data/clean/.gitkeep
