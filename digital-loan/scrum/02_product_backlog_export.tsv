@@ -1,0 +1,9 @@
+Title	URL	Assignees	Status	Linked pull requests	Sub-issues progress
+[DL-06] 完成三張 EDA 分析圖表與洞察	https://github.com/a960826153-spec/-/issues/10		Todo		
+[DL-08] 完成 AWS 成本試算與風險管理文件	https://github.com/a960826153-spec/-/issues/12		Todo		
+[DL-01] 完成 S3 申貸 PDF 上傳	https://github.com/a960826153-spec/-/issues/5		Done		
+[DL-02] 完成 Textract 申貸文件辨識	https://github.com/a960826153-spec/-/issues/6		Done		
+[DL-03] 完成 DynamoDB 案件建檔與驗證	https://github.com/a960826153-spec/-/issues/7		Done		
+[DL-04] 完成 AWS MVP 程式與驗證證據整理	https://github.com/a960826153-spec/-/issues/8		Done		
+[DL-05] 建立 100 筆模擬申貸資料集	https://github.com/a960826153-spec/-/issues/9		Done		
+[DL-07] 完成模擬申貸資料品質診斷	https://github.com/a960826153-spec/-/issues/11		Done		
