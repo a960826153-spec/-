@@ -529,11 +529,11 @@ https://calculator.aws/#/estimate?id=48288f1051fa9464aaa020334f22bb4b47da91a1
 
 | 角色 | 負責組員 |
 |---|---|
-| Product Owner | 待組內確認 |
-| Scrum Master | 待組內確認 |
-| AWS MVP 開發 | 待組內確認 |
-| 資料分析與品質檢查 | 待組內確認 |
-| 文件與簡報整合 | 待組內確認 |
+| Product Owner | 朱家禾 |
+| Scrum Master | 陳宥任 |
+| AWS MVP 開發 | 陳宥任 |
+| 資料分析與品質檢查 | 陳宥任，江宇睿 |
+| 文件與簡報整合 | 朱家禾，江宇睿 |
 
 正式繳交前應填入實際組員姓名與工作分工。
 
